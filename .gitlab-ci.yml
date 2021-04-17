@@ -1,0 +1,7 @@
+image: cypress/base:10
+
+stages: 
+  stage: test
+  script:
+  - npm install
+  - npm run headless
