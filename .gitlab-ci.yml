@@ -5,3 +5,4 @@ stages:
   script:
   - npm install
   - npm run headless
+
