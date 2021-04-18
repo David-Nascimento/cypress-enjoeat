@@ -5,7 +5,7 @@ describe('Deve ver a lista de restaurandes', () => {
     })
 
     //Pulando o teste
-    it.skip('Valida Tela de apresentação', () => {
+    it('Valida Tela de apresentação', () => {
         
         //lida logo
         cy.title().should('be.equals', 'Enjoeat | Angular')
