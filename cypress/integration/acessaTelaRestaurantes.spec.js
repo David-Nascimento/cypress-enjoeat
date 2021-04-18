@@ -19,6 +19,8 @@ describe('Deve ver a lista de restaurandes', () => {
         // barra topo
         cy.get('.nav > :nth-child(1) > a').should('have.text', 'Restaurantes')
         cy.get(':nth-child(2) > a').should('have.text', 'Sobre')
+
+        //TODO valida alguma coisa
     });
 
 })
