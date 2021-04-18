@@ -4,7 +4,7 @@
   "description": "Projeto para estudos com Cypress",
   "main": "index.js",
   "scripts": {
-    "runHeadless": "./node_modules/.bin/cypress run --headless",
+    "cun:ci": "./node_modules/.bin/cypress run --headless",
     "runHeaded": "./node_modules/.bin/cypress run --headed --browser chrome",
     "cy:open": "./node_modules/.bin/cypress open"
   },
