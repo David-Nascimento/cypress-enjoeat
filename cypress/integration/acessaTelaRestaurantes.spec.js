@@ -10,7 +10,7 @@ describe('Deve ver a lista de restaurandes', () => {
 
     //Pulando o teste
     it('Valida Tela de apresentação', () => {
-        
+
         //lida logo
         cy.title().should('be.equals', 'Enjoeat | Angular')
 
