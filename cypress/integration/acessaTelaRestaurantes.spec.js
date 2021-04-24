@@ -26,7 +26,7 @@ describe('Deve ver a lista de restaurandes', () => {
 
     });
 
-    it.only('Deve acessar o restaurante Bread & Bakery', () => {
+    it('Deve acessar o restaurante Bread & Bakery', () => {
         cy.get('.btn').click()
 
         cy.get('h1').should('exist')
@@ -85,7 +85,7 @@ describe('Deve ver a lista de restaurandes', () => {
             expect(itemCarrinho).to.be.contain('Total:')
             expect(itemCarrinho).to.be.length(1)
         })
-        
+
         //Fecha pedido
         cy.get('.btn-success').click()
     });
