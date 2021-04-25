@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Deve ver a lista de restaurandes', () => {
 
     before(() => {
