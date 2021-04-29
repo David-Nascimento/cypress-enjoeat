@@ -92,4 +92,6 @@ describe('Deve ver a lista de restaurandes', () => {
         cy.get('.btn-success').click()
     });
 
+    
+
 })

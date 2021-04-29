@@ -16,15 +16,20 @@
  * @type {Cypress.PluginConfig}
  */
 
- const { lighthouse, prepareAudit } = require('cypress-audit');
+ const { lighthouse, pa11y, prepareAudit } = require("cypress-audit");
  
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
-  on('before:browser:launch', (browser = {}, launchOptions) => {
+  on("before:browser:launch", (browser = {}, launchOptions) => {
     prepareAudit(launchOptions);
   });
 
-  on('task', {
-    lighthouse: lighthouse(),
+  on("task", {
+    lighthouse: lighthouse((lighthouseReport) => {
+      console.log(lighthouseReport); // raw lighthouse reports
+    }),
+    pa11y: pa11y((pa11yReport) => {
+      console.log(pa11yReport); // raw pa11y reports
+    }),
   });
 }

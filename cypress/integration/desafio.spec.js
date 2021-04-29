@@ -33,13 +33,34 @@ describe('Desafio aula prompt', () => {
         cy.get('#resultado > :nth-child(1)').should('have.text', 'Cadastrado!')
     });
 
-    it.only('Interacao com iFrame', () => {
+    it('Interacao com iFrame', () => {
         cy.get('#frame1').then(iframe => {
             const body = iframe.contents().find('body')
             cy.wrap(body).find('#tfield')
                 .type('funciona?')
                 .should('have.value', 'funciona?')
         })
+    });
+
+    it('should run performance audits using custom thresholds', () => {
+        cy.lighthouse('/cypress/componentes.html').as('results')
+        
+        const customThresholds = {
+            performance: 50,
+            accessibility: 50,
+            seo: 70,
+            'first-contentful-paint': 2000,
+            'largest-contentful-paint': 3000,
+            'cumulative-layout-shift': 0.1,
+            'total-blocking-time': 500,
+        };
+
+        const desktopConfig = {
+            formFactor: 'desktop',
+            screenEmulation: { disabled: true },
+        };
+
+        cy.lighthouse(customThresholds, desktopConfig);
     });
     
 })
