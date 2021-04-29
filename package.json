@@ -8,10 +8,25 @@
     "runHeaded": "./node_modules/.bin/cypress run --headed --browser chrome",
     "cy:open": "./node_modules/.bin/cypress open"
   },
-  "keywords": ["QA Analyst"],
+  "keywords": [
+    "QA Analyst"
+  ],
   "author": "David Halison",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^7.1.0"
+    "@types/jasmine": "~2.5.53",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "^9.4.0",
+    "codelyzer": "^4.5.0",
+    "cypress": "^7.2.0",
+    "cypress-audit": "^0.3.0",
+    "jasmine-core": "^2.6.4",
+    "jasmine-spec-reporter": "~4.1.0",
+    "karma": "~1.7.0",
+    "karma-chrome-launcher": "~2.1.1",
+    "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2"
   }
 }

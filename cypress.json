@@ -1,4 +1,8 @@
 {
     "defaultCommandTimeout": 1000,
-    "baseUrl": "http://wcaquino.me"
+    "baseUrl": "http://wcaquino.me",
+    "defaultCommandTimeOut": 30000,
+    "viewportHeight": 800,
+    "viewportWidth": 500,
+    "retries": 3
 }
