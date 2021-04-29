@@ -11,5 +11,4 @@ build-docker:
     script: 
     - docker build -t minha-imagem .
 
-
 #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    
