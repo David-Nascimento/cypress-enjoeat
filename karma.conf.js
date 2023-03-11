@@ -8,21 +8,31 @@ module.exports = function(config) {
       plugins: [
         require('karma-jasmine'),
         require('karma-chrome-launcher'),
-        require('karma-jasmine-html-reporter'),
+        require('karma-jasmine-diff-reporter'), // novo plugin adicionado
         require('karma-coverage-istanbul-reporter'),
-      ],
+    ],
       client: {
         clearContext: false // leave Jasmine Spec Runner output visible in browser
       },
       coverageIstanbulReporter: {
-        dir: require('path').join(__dirname, 'coverage'), reports: ['html', 'lcovonly'],
-        fixWebpackSourcePaths: true
-      },
-      
-      reporters:
-        config.angularCli && config.angularCli.codeCoverage
-          ? ['progress', 'coverage-istanbul']
-          : ['progress', 'kjhtml'],
+        dir: require('path').join(__dirname, 'coverage'),
+        reports: ['html', 'lcovonly'],
+        fixWebpackSourcePaths: true,
+        thresholds: {
+            emitWarning: false,
+            global: {
+                statements: 90,
+                branches: 90,
+                functions: 90,
+                lines: 90
+            }
+        },
+        skipFilesWithNoCoverage: true
+    },
+    reporters:
+      config.angularCli && config.angularCli.codeCoverage
+        ? ['progress', 'coverage-istanbul']
+        : ['progress', 'kjhtml'],
       port: 9876,
       colors: true,
       logLevel: config.LOG_INFO,
