@@ -1,8 +1,0 @@
-{
-    "defaultCommandTimeout": 1000,
-    "baseUrl": "http://localhosto:3000",
-    "defaultCommandTimeOut": 30000,
-    "viewportHeight": 800,
-    "viewportWidth": 500,
-    "retries": 3
-}
