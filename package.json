@@ -4,9 +4,9 @@
   "description": "Projeto Cypress",
   "main": "index.js",
   "scripts": {
-    "cy:ci": "./node_modules/.bin/cypress run --headless",
-    "runHeaded": "./node_modules/.bin/cypress run --headed --browser chrome",
-    "cy:open": "./node_modules/.bin/cypress open"
+    "ci": "cypress run --headless",
+    "runHeaded": "cypress run --headed --browser chrome",
+    "cy:open": "cypress open"
   },
   "keywords": [
     "QA Analyst"
@@ -14,24 +14,13 @@
   "author": "David Halison",
   "license": "ISC",
   "devDependencies": {
-    "@types/jasmine": "~2.5.53",
-    "@types/jasminewd2": "~2.0.2",
     "@types/node": "^9.4.0",
-    "codelyzer": "^4.5.0",
-    "jasmine-core": "^2.6.4",
-    "jasmine-spec-reporter": "~4.1.0",
-    "karma": "~1.7.0",
-    "karma-chrome-launcher": "~2.1.1",
-    "karma-cli": "~1.0.1",
-    "karma-coverage-istanbul-reporter": "^1.2.1",
-    "karma-jasmine": "~1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2"
+    "codelyzer": "^6.0.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "dependencies": {
-    "@angular-devkit/build-angular": "^15.2.2",
-    "@angular/cli": "^15.2.2",
-    "cypress": "^12.7.0",
-    "cypress-audit": "^1.1.0",
+    "cypress": "8.4",
+    "cypress-audit": "^1.0.0",
     "cypress-lighthouse": "^0.1.0"
   }
 }
