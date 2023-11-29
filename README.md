@@ -50,4 +50,4 @@ npm run cy:open
 Executando em headless
 ```js
 npm run ci
-``
+```
