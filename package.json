@@ -19,8 +19,10 @@
     "cypress-cucumber-preprocessor": "^4.3.1"
   },
   "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0",
     "cypress": "8.4",
     "cypress-audit": "^1.0.0",
-    "cypress-lighthouse": "^0.1.0"
+    "cypress-lighthouse": "^0.1.0",
+    "cypress-xpath": "^2.0.1"
   }
 }

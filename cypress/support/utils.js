@@ -6,10 +6,10 @@ class Util {
         var m = dateFull.getMonth() + 1;
         var y = dateFull.getFullYear();
         var h = dateFull.getHours();
-        var m = dateFull.getMinutes();
+        var mn = dateFull.getMinutes();
         var s = dateFull.getSeconds();
 
-        var dateTimeCurrent = '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d) + ' ' + h + ':' + m + s;
+        var dateTimeCurrent = '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d) + ' ' + h + ':' + mn + s;
 
         cy.screenshot(dateTimeCurrent)
     }

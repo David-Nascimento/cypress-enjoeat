@@ -1,19 +1,8 @@
-/// <reference types="cypress" />
 
-describe('Deve ver a lista de restaurandes', () => {
+const el = require('../elements/elements');
+class paginaApresentacao {
 
-    before(() => {
-        cy.visit('/')
-    })
-
-    beforeEach(() => {
-        cy.reload()
-    })
-
-    //Pulando o teste
-    it('Valida Tela de apresentação', () => {
-
-        //lida logo
+    paginaInicial() {
         cy.title().should('be.equals', 'Enjoeat | Angular')
 
         // Valida o paragrafo
@@ -26,9 +15,9 @@ describe('Deve ver a lista de restaurandes', () => {
         cy.get('.nav > :nth-child(1) > a').should('have.text', 'Restaurantes')
         cy.get(':nth-child(2) > a').should('have.text', 'Sobre')
 
-    });
+    }
 
-    it('Deve acessar o restaurante Bread & Bakery', () => {
+    restauranteBreadBakery() {
         cy.get('.btn').click()
 
         cy.get('h1').should('exist')
@@ -40,8 +29,9 @@ describe('Deve ver a lista de restaurandes', () => {
             expect(rest).to.be.contain('Padaria')
             expect(rest).to.be.contain('25 minutos')
         }).click()
+    }
 
-
+    pageBreadBakery() {
         //Validar o click
         cy.request('/api/restaurants/bread-bakery').then((response) => {
             expect(response.status).to.eq(200)
@@ -66,7 +56,9 @@ describe('Deve ver a lista de restaurandes', () => {
             expect(detail).to.be.contain('Horários')
             expect(detail).to.be.contain('Funciona de segunda à sexta, de 8h às 23h')
         })
+    }
 
+    fecharPedido() {
         //Deve validar um item e adicionar ao carrinho
         cy.get(':nth-child(1) > .menu-item-info-box').then(cupCake => {
             expect(cupCake).to.be.contain('Cup Cake')
@@ -90,8 +82,8 @@ describe('Deve ver a lista de restaurandes', () => {
 
         //Fecha pedido
         cy.get('.btn-success').click()
-    });
+    }
 
-    
+}
 
-})
+export default new paginaApresentacao();
