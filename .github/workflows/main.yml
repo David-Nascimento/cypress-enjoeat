@@ -25,7 +25,7 @@ jobs:
       run: npm install
 
     - name: Save IP address as artifact
-      run: echo "::set-output name=IP_ADDRESS::$(curl ifconfig.me)"
+      run: echo "name=IP_ADDRESS::$(curl ifconfig.me)" >> $GITHUB_OUTPUT
       id: save-ip
       continue-on-error: true
       working-directory: enjoeat
