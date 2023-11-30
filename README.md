@@ -19,11 +19,8 @@ Estrutura do projeto
 │     ├── .gitignore
 │     ├── package.json
 │     └── server.js
-├── .dockerignore
 ├── .gitignore
 ├── cypress.json
-├── Dockerfile
-├── nginx.conf
 ├── package.json
 ├── README.md
 └── yarn.lock
