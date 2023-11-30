@@ -22,8 +22,7 @@ Estrutura do projeto
 ├── .gitignore
 ├── cypress.json
 ├── package.json
-├── README.md
-└── yarn.lock
+└── README.md
 ```
 
 ## Configurando ambiente
