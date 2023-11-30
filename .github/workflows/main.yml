@@ -1,0 +1,31 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Navigate to app folder
+      run: cd enjoeat
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Save IP address as artifact
+      run: echo "::set-output name=IP_ADDRESS::$(curl ifconfig.me)"
+      id: save-ip
+      continue-on-error: true
+      working-directory: enjoeat
